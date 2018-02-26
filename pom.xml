@@ -5,10 +5,32 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>com.htffund.logtest</name>
   <dependencies>
-   <dependency>  
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.2</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.2</version>
+</dependency>
+<dependency> <!-- 桥接：告诉Slf4j使用Log4j2 -->
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-slf4j-impl</artifactId>
+    <version>2.2</version>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.10</version>
+</dependency>
+
+<!--    <dependency>  
     <groupId>org.slf4j</groupId>  
     <artifactId>slf4j-log4j12</artifactId>  
     <version>1.7.2</version>  
    </dependency>
+    -->
    </dependencies> 
 </project>
