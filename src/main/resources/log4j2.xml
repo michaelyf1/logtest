@@ -29,28 +29,10 @@
                 <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
               </Filters>
 		</RollingFile>
-		 
-		<RollingFile name="ELP-BIGDATA" fileName="elp-bigdata.log"
-			filePattern="elp-bigdata_%d{yyyy-MM-dd}-%i"
-			append="true" immediateFlush="false" bufferedIO="true" bufferSize="8192">
-			<PatternLayout  charset="UTF-8">
-				<Pattern>%d %t  %-5p : %m%n</Pattern>
-			</PatternLayout>
-			<Policies>
-				<TimeBasedTriggeringPolicy/>
-				<SizeBasedTriggeringPolicy size="1024 MB"/>
-			</Policies>
-		</RollingFile>
 	</Appenders>
 	
 	<Loggers>
-	<!-- 	<Logger name="htfLog" level="INFO" additivity="false">  
-	 			<AppenderRef ref="ELP-BIGDATA" />  
-	  	</Logger>
-	  	<Logger name="htfErr" level="ERROR" additivity="false">  
-	 			<AppenderRef ref="ELP-ERROR" />  
-	  	</Logger>  
-	  	 -->
+	
 		<Logger name="org.springframework" level="WARN" additivity="false">
 			<AppenderRef ref="ELP-ALL" />
 		</Logger>
